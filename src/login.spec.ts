@@ -44,7 +44,7 @@ test.describe('Вход', () => {
         await page.getByRole('button').click()
 
         const title = page.getByTestId('title')
-        expect(title).not.toBeNull()
+        await expect(title).not.toBeEmpty()
         await expect(title).toBeVisible()
     })
 })
